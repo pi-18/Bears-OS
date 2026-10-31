@@ -12,3 +12,5 @@ it is all front end including html, css and java script.
 once the website opens, a welcome window comes up. if it doesnt, make sure to click the bears OS sign at the top. 
 the apps are interactive and there is a search button at the bottom to search for the apps youre looking for. 
 it also has timer and date actively adjusted to your time line.
+![Alt text for your image](images/<img width="1292" height="598" alt="Screenshot 2026-10-31 160242" src="https://github.com/user-attachments/assets/aa09cb0b-7f81-4d24-aa45-9ea013ddebe0" />)
+
