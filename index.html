@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html>
+
+<body style="background-image: url(bg\ pic.png);">
+
+    <!-- welcome window -->
+    <div id="welcome" style="border: solid; width: 500px; height: 400px; padding: 20px; border-radius: 20%; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); background-color: lightblue;">
+
+        <p id="closeButton" style="cursor: pointer; color: red; height: 16px; width: 16px;">X</p>
+
+        <div id="welcomeheader">
+            <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 23px;">welcome to BearsOS</p>
+            <p>Hello, This is Pi. this is a bear themed Web OS which are my fav animals.</p> <br>
+            <p>navigation <br>
+              this web OS includes 4 apps in total and search bar at the bottom. <br>
+              click once to open the apps. heavy apps may take a little bit longer to open than the other 2 apps at the top so i 
+              recommend you to go over the other apps until they open. 
+              hope you enjoy the journey.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- top bar -->
+    <div id="top" style="display: flex; justify-content: space-between; background-color: rgba(0, 0, 0, 0.25); backdrop-filter: blur(10px); border-radius: 20px;">
+
+        <p style="margin: 16px; font-family: fantasy; cursor: pointer;" id="openButton">Bears OS</p>
+
+        <p style="margin: 16px;" id="timeElement"> 28/08/2026 11:03 PM</p>
+
+    </div>
+
+
+    <!-- apps -->
+    <div id="desktopApps" style="padding-left: 10px; padding-top: 30px;">
+
+        <!-- cave notes icon -->
+        <div id="caveNotesAppIcon" class="notesIcon" style="padding: 16px;">
+            <p style="font-family: monospace;">cave notes</p>
+            <img style="width: 64px; height: 64px; border-radius: 20px;" src="bear notes - cave.avif" alt="">
+        </div>
+
+        <!-- gallery icon -->
+        <div id="galleryAppIcon" class="galleryIcon" style="padding: 16px;">
+            <p style="font-family: monospace;">gallery</p>
+            <img style="width: 64px; height: 64px; border-radius: 20px;" src="gallery.jpeg" alt="">
+        </div>
+
+        <!-- calculator icon -->
+        <div id="calculatorAppIcon" class="calculatorIcon" style="padding: 16px;">
+            <p style="font-family: monospace;">calculator</p>
+            <img style="width: 64px; height: 64px; border-radius: 20px;" src="calculator.jpeg" alt="">
+        </div>
+
+        <!-- bear alarm icon -->
+        <div id="bearAlarmAppIcon" class="bearAlarmIcon" style="padding: 16px;">
+            <p style="font-family: monospace;">bear alarm</p>
+            <img style="width: 64px; height: 64px; border-radius: 20px;" src="clock.jpeg" alt="">
+        </div>
+
+    </div>
+
+
+    <!-- cave notes window -->
+    <div id="caveNotesWindow" style="border: solid; width: 500px; height: 400px; padding: 20px; border-radius: 10%; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);  display: none;">
+
+       
+        <div id="cavenotesheader">
+            <p id="caveNotes"></p>
+            <p class="notesclose" id="notesclosebutton" style="cursor: pointer; color: red; height: 16px; width: 16px;">X</p>
+        </div>
+
+        <!-- notes window inside the app -->
+        <div style="background-color: bisque; margin: 6px; border-radius: 12px; width: 440px;
+        height: 250px; padding: 16px; font-family: cursive; display: flex; flex-direction: column; margin-top: 40px;">
+
+            <div style="flex: 1; overflow-y: scroll;" id="notescontent">
+                <p contenteditable="true" id="notesInput"> start writing your thougths...</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- gallery window -->
+    <div id="galleryWindow" style="border: solid; width: 500px; height: 400px; padding: 20px; border-radius: 20%; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); background-image: url(window\ stars.png); display: none;">
+
+        <p style="cursor: pointer; color: red; height: 16px; width: 16px;" id="galleryclosebutton">X</p>
+
+        <div id="gallery">
+
+
+        <div id="galleryContent">
+
+            <div class="galleryItem">
+                <img src="polar bear.jpeg">
+            </div>
+
+            <div class="galleryItem">
+                <img src="images.jpeg">
+            </div>
+
+            <div class="galleryItem">
+                <img src="bamboo.jpeg">
+            </div>
+
+            <div class="galleryItem">
+              <img src="panda.jpeg">
+            </div>
+
+        </div>
+
+        
+
+    </div>
+
+
+    <!-- calculator window -->
+    <div id="calculatorWindow" style="border: solid; width: 500px; height: 400px; padding: 20px; border-radius: 20%; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); background-image: url(window\ stars.png); display: none;">
+
+        <p style="cursor: pointer; color: red; height: 16px; width: 16px;" id="calculatorclosebutton">X</p>
+        
+        <!-- calculator window -->
+
+        <div id="calculator">
+
+    <div id="calculatorDisplay">
+      0
+    </div>
+
+    <div id="calculatorButtons">
+
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button data-value="/">/</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button data-value="*">*</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button data-value="-">-</button>
+
+        <button data-value="C">C</button>
+        <button data-value="0">0</button>
+        <button data-value="=">=</button>
+        <button data-value="+">+</button>
+
+    </div>
+
+</div>
+
+    </div>
+
+
+    <!-- bear tube window -->
+    <div id="bearAlarmWindow" style="border: solid; width: 500px; height: 400px; padding: 20px; border-radius: 20%; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); background-image: url(window\ stars.png); display: none;">
+
+       
+
+       <div id="bearAlarmHeader" style="height: 20px; width: 20px;">
+        <p style="cursor: pointer; color: red; height: 16px; width: 16px;" id="bearalarmclosebutton">X</p>
+       </div>
+
+       <div id="alarmApp">
+
+    <h2 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Set an Alarm</h2>
+
+    <input type="time" id="alarmTime">
+
+    <div id="alarmButtons">
+        <button id="setAlarm" style="border-radius: 20px;">set alarm</button>
+        <button id="stopAlarm" style="border-radius: 20px;">stop alarm</button>
+    </div>
+
+    <p id="alarmStatus" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">No alarm set</p>
+
+       </div> 
+
+    
+    </div>
+
+
+    </div>
+
+    
+
+    <div id="searchButton">
+    <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search"
+    >
+</div>
+
+
+
+ <link rel="stylesheet" href="style.css">
+ <script src="script.js"></script>
+</body>
+</html>
